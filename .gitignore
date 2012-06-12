@@ -1,0 +1,14 @@
+.DS_Store
+app.tmproj
+*.log
+
+tempdata/
+
+/war/
+.metadata/
+/app/target
+/app/.settings
+/app/Servers
+/app/.classpath
+/app/.project
+/app/.springBeans

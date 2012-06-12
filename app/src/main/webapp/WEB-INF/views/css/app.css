@@ -1,0 +1,163 @@
+  body {
+     padding: 0px;
+     margin: 0px;
+     font: 62.5% "Trebuchet MS", sans-serif; 
+     background: #000 url(img/bg-body.jpg) repeat left top;
+     height: 101%;
+     overflow: scroll;
+  }
+  .container{
+     position: relative;
+     overflow: hidden;
+     margin: 20px auto;
+     padding: 10px;
+     width: 900px;
+  }
+  #header-logo {
+  	float: right;
+  }
+  .header{
+     float: left;
+     width: 100%;
+     padding: 10px;
+    font: 1.2em Arial, sans-serif; 
+  }
+  #header-title {
+    font: 3em Arial, sans-serif; 
+    color: #999;
+  }
+  #header-title img {
+    float: right;
+    margin-right: 20px; 
+    
+  }
+  #header-info {
+    margin-top: 10px;
+    margin-right: 20px; 
+    padding: 0 .7em;
+    height: auto;
+  }
+  #header-info-icon {
+    float: left;
+    margin-right: 3px;
+  }
+  .content{
+     width: 100%;
+     right: 90%;
+  }
+
+  .content-left {
+     float: left;
+     width: 32%;
+     margin-left: 10px;
+     margin-right: 10px;
+  }
+  .content-right{
+     float: right;
+     width: 63%;
+     margin-right: 10px;
+  }
+  
+  .spacer {
+    clear: both;
+    height: 1px;
+  }
+  .spacer-10 {
+    clear: both;
+    height: 10px;
+  }
+  .spacer-20 {
+    clear: both;
+    height: 20px;
+  }
+
+  h2 {
+  	color: #dcdcdc;
+  	font: 1.6em Arial, sans-serif; 
+  	border-bottom: 2px solid #fff;
+  }
+  label, #callOnLabel {
+  	color: #fff;
+  	font: 1.2em Arial, sans-serif; 
+  	display: inline-block;
+  	padding: 4px 0px;
+  	vertical-align: top;
+  }
+  
+  .content-left label {
+  	width: 80px;
+  }
+
+  .content-left .full {
+  	width: 180px;
+  }
+  
+  fieldset {
+  	border: 0;
+  	border-bottom: 1px solid #dcdcdc;
+  	padding: 10px 5px;
+  }
+  
+  textarea {
+  	width: 100%;
+  	height: 60px;
+  }
+  
+  #button-ctrl button {
+	float: right;
+  }
+  
+  #callQueue {
+  	width: 100%;
+  	border: 0;
+  	padding: 0;
+  	margin: 0;
+  	color: #333;
+  }  
+  #callQueue th {
+  	background-color: #dcdcdc;
+  	padding: 3px;
+  	font-weight: bold;
+  	font: 1.2em Arial, sans-serif; 
+  }
+  #callQueue td {
+  	padding: 2px;
+  	text-align: center;
+  	font: 1.2em Arial, sans-serif;
+  }
+  #callQueue tr {
+	cursor: pointer;
+  }
+  
+  #callQueue tr.status-opened {
+  	background-color: #00FF00;
+  	color: #000;
+  }
+  
+  #callQueue tr.status-pending {
+  	background-color: #FFFF00;
+  	color: #000;
+  }
+  
+  #callQueue tr.status-closed {
+  	background-color: #666;
+  	color: #dcdcdc;
+  }
+  
+  .align-left {
+  	float: left;
+  	margin: 5px 20px 5px 0;
+  }
+  .align-right {
+  	float: right;
+  	margin: 0 0 0 30px;
+  	padding: 0;
+  }
+  a.dark {
+  	color: #000;
+  }
+  
+  .long {
+	width: 100%;
+  }
+ 
