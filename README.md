@@ -1,4 +1,60 @@
 sqlf-cloud
 ==========
 
-Artifacts from SQLFire Fast Data that Spans the Globe Webcast.
+This project demonstrates the following,
+
+1) The ability to use SQLFire as your datastore.
+2) Data replication via the WAN gateway.
+3) More to come (Pulse, SQLFW, etc)
+
+The following pre-requisites are required to run this application. First you must
+have SQLFire 1.1.X installed on your machine and on your path. This can be downloaded
+from the VMware/Pivotal website. Once installed verify you can access on the command line
+using sqlf.
+
+This project has 2 main directories,
+
+1) The db directory contains two directories, host1 and host2. Each host directory is 
+   designed to run a SQLfire cluster instance (1 locator and 2 instances of SQLFire).
+   Each instance can be local or running in different VMs/physical machines.
+
+   In each directory you'll find a set of bash shell scripts to configure, start and
+   stop each SQLFire instance. Prior to starting the cluster please source the configure.sh
+   script to set your environment variables. Read the description of each script below.  
+  
+  - config.sh - provides a number of default settings for your cluster. Only the Local_IP
+  setting is required. Update it with your local IP address and source it before starting
+  your cluster.
+  
+  - start.sh - This script contains a number of SQLFire boot properties to make 
+  configuring your SQLF cluster easy. The license keys are defined in the script and
+  a current license is required for Enterprise and WAN gateway for the functionality to
+  work. License keys are available from Pivotal.
+  
+  -setup.sql - This script configures the SQLFire cluster for WAN replication. Its
+  run after you have connected to SQLfire using the following commands from a command
+  prompt:
+  
+  sudo sqlf - sudo on Mac
+  connect client 'local_IP:7773'
+  run 'setup.sql' - assuming its your current directory otherwise provide path. 
+  
+  -stop.sh - This script will tear down your SQLFire cluster and remove the data
+  directory. All data will be lost as this is designed to be temporary. If you prefer
+  to keep the data, the logic for removal can be commented out.
+  
+ Assuming no errors your SQLFire cluster should replicate data Host1/Host2 and 
+ Host2/Host1. You can test this by executing the following SQL statements
+ 
+ insert into app.call_log values ('1234', 'test', 'test', 'test', '2013-12-12 11:11:11', 'test');
+ select * from app.call_log;
+
+2) app - Contains a call center Spring MVC application used to enter data and display
+ call entries. Import the application into STS using the existing maven project option
+ (File->import->Maven->Existing Maven Project and browse to the location of the pom.xml
+ file). 
+ 
+ Open the src/main/resources folder and open the app.properties file. Change the data
+ URL to point to your SQLFire Cluster and update the env.id to an appropriate location.
+ This value is displayed on the Screen as the location. Build the application using 
+ maven and deploy it in your local tcServer instance on STS. 
