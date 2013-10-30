@@ -23,6 +23,7 @@ sqlf server start \
         -license-serial-number=Y102F-J0J93-N8A8R-0M2VK-2EJ4U,Y543F-J0101-1828H-0P2WK-3DT6Y \
 	-client-bind-address=$LOCAL_IP \
 	-client-port=$SERVER1_PORT \
+        -jmx-manager=true \
 	-dir=$SERVER1_DIR 
 
 sqlf server start \
