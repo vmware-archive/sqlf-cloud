@@ -1,14 +1,21 @@
 # Get current directory
 DEMO_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# System specific
+# System ID used by Sqlfire 
 export SYSTEM_ID=1
-export LOCAL_IP=us-east.chmarny.com
+
+# Update with your local IP address and name
+export LOCAL_IP=10.0.1.17
 export LOCAL_NAME=us-east.chmarny.com
-export SYNC_TO=sing.chmarny.com
+
+# Update with IP/Name of remote site
+export SYNC_TO=10.0.1.17
 export SYNC_TO_PORT=7780
 
+# Local port for remote synch locator
 export LOCAL_PORT=7770
+
+# Local ports for Sqlf
 export LOCATOR_PORT=7773
 export SERVER1_PORT=7771
 export SERVER2_PORT=7772
