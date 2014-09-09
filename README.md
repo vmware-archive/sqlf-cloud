@@ -1,11 +1,10 @@
-sqlf-cloud
-==========
+== sqlf-cloud
 
 This project demonstrates the following,
 
-. The ability to use SQLFire as your datastore.
-. Data replication via the WAN gateway.
-. More to come (Pulse, SQLFW, etc)
+.The ability to use SQLFire as your datastore.
+.Data replication via the WAN gateway.
+.More to come (Pulse, SQLFW, etc)
 
 The following pre-requisites are required to run this application. First you must
 have SQLFire 1.1.X installed on your machine and on your path. This can be downloaded
