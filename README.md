@@ -3,9 +3,9 @@ sqlf-cloud
 
 This project demonstrates the following,
 
-1) The ability to use SQLFire as your datastore.
-2) Data replication via the WAN gateway.
-3) More to come (Pulse, SQLFW, etc)
+. The ability to use SQLFire as your datastore.
+. Data replication via the WAN gateway.
+. More to come (Pulse, SQLFW, etc)
 
 The following pre-requisites are required to run this application. First you must
 have SQLFire 1.1.X installed on your machine and on your path. This can be downloaded
@@ -14,9 +14,9 @@ using sqlf.
 
 This project has 2 main directories,
 
-1) The db directory contains two directories, host1 and host2. Each host directory is 
-   designed to run a SQLfire cluster instance (1 locator and 2 instances of SQLFire).
-   Each instance can be local or running in different VMs/physical machines.
+. The db directory contains two directories, host1 and host2. Each host directory is 
+  designed to run a SQLfire cluster instance (1 locator and 2 instances of SQLFire).
+  Each instance can be local or running in different VMs/physical machines.
 
    In each directory you'll find a set of bash shell scripts to configure, start and
    stop each SQLFire instance. Prior to starting the cluster please source the configure.sh
@@ -49,7 +49,7 @@ This project has 2 main directories,
  insert into app.call_log values ('1234', 'test', 'test', 'test', '2013-12-12 11:11:11', 'test');
  select * from app.call_log;
 
-2) app - Contains a call center Spring MVC application used to enter data and display
+. app - Contains a call center Spring MVC application used to enter data and display
  call entries. Import the application into STS using the existing maven project option
  (File->import->Maven->Existing Maven Project and browse to the location of the pom.xml
  file). 
