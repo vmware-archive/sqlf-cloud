@@ -1,4 +1,4 @@
-== sqlf-cloud
+= sqlf-cloud
 
 This project demonstrates the following,
 
