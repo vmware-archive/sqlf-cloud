@@ -1,4 +1,4 @@
-= sqlf-cloud
+= SQLF-Cloud
 
 This project demonstrates the following,
 
@@ -8,11 +8,7 @@ This project demonstrates the following,
 
 == Pre-requisites
 
-. SQLFire 1.1.x isntalled on your machine path. This can be downloaded from the VMware/Pivotal website. Once installed verify you can access on the command line using sqlf.
-
-== Directories 
-
-This project is organized into 2 main directories.
+. SQLFire 1.1.x installed on your machine path. This can be downloaded from the VMware/Pivotal website. Once installed verify you can access on the command line using sqlf command.
 
 === DB Directory 
 
@@ -25,17 +21,14 @@ In each directory you'll find a set of bash shell scripts to configure, start an
   
 "start.sh" contains a number of SQLFire boot properties to make configuring your SQLF cluster easy. The license keys are defined in the script an a current license is required for Enterprise and WAN gateway for the functionality to work. License keys are available from Pivotal.
   
-  -setup.sql - This script configures the SQLFire cluster for WAN replication. Its
-  run after you have connected to SQLfire using the following commands from a command
+"setup.sql" configures the SQLFire cluster for WAN replication. Its run after you have connected to SQLfire using the following commands from a command
   prompt:
   
   sudo sqlf - sudo on Mac
   connect client 'local_IP:7773'
   run 'setup.sql' - assuming its your current directory otherwise provide path. 
   
-  -stop.sh - This script will tear down your SQLFire cluster and remove the data
-  directory. All data will be lost as this is designed to be temporary. If you prefer
-  to keep the data, the logic for removal can be commented out.
+"stop.sh" tears down your SQLFire cluster and removes the data directory. All data will be lost as this is designed to be temporary. If you prefer to keep the data, the logic for removal can be commented out.
   
  Assuming no errors your SQLFire cluster should replicate data Host1/Host2 and 
  Host2/Host1. You can test this by executing the following SQL statements
@@ -43,7 +36,8 @@ In each directory you'll find a set of bash shell scripts to configure, start an
  insert into app.call_log values ('1234', 'test', 'test', 'test', '2013-12-12 11:11:11', 'test');
  select * from app.call_log;
 
-. app - Contains a call center Spring MVC application used to enter data and display
+=== Apps Direcotry
+Contains a call center Spring MVC application used to enter data and display
  call entries. Import the application into STS using the existing maven project option
  (File->import->Maven->Existing Maven Project and browse to the location of the pom.xml
  file). 
